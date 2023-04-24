@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vf-page>
+    <attributes>
+        <description>Emails List</description>
+        <title>Emails List</title>
+    </attributes>
+    <body>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Subject</th>
+                            <th>Open/Close Date</th>
+                            <th>Note</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="text" name="from" />
+                            </td>
+                            <td>
+                                <input type="text" name="to" />
+                            </td>
+                            <td>
+                                <input type="text" name="subject" />
+                            </td>
+                            <td>
+                                <input type="text" name="open_close_date" />
+                            </td>
+                            <td>
+                                <input type="text" name="note" />
+                            </td>
+                            <td>
+                                <input type="text" name="action" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Import document file:</label>
+                    <input type="file" name="import_document" />
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Search by username and email:</label>
+                    <input type="text" name="search_username_email" />
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Number of records to view:</label>
+                    <select name="number_of_records">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="40">40</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Pagination:</label>
+                    <select name="pagination">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="40">40</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <button type="submit" name="add_new_user">Add New User</button>
+                    <button type="submit" name="edit_user">Edit User</button>
+                    <button type="submit" name="archive_user">Archive User</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</vf-page>
