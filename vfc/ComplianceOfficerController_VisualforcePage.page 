@@ -1,0 +1,27 @@
+Visualforce page
+<apex:page controller="ComplianceOfficerController" showHeader="false">
+    <apex:form>
+        <apex:pageBlock>
+            <apex:pageBlockSection title="Email List">
+                
+                <apex:inputField value="{!SearchEmail}" label="Search by Username and Email"/>
+                
+                <apex:outputPanel rendered="{!searchEmailList.size > 0}">
+                    <apex:pageBlockTable value="{!searchEmailList}" var="email">
+                        <apex:column value="{!email.From}"/>
+                        <apex:column value="{!email.To}"/>
+                        <apex:column value="{!email.Subject}"/>
+                        <apex:column value="{!email.OpenDate}"/>
+                        <apex:column value="{!email.CloseDate}"/>
+                        <apex:column value="{!email.Note}"/>
+                        <apex:column value="{!email.Action}"/>
+                    </apex:pageBlockTable>
+                    <apex:panelGrid columns="2">
+                        <apex:commandButton value="Export to PDF" action="{!exportToPDF}"/>
+                        <apex:commandButton value="Export to Excel" action="{!exportToExcel}"/>
+                    </apex:panelGrid>
+                </apex:outputPanel>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
